@@ -1,0 +1,108 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Very light gray, almost white */
+    --foreground: 240 10% 3.9%; /* Dark blue/black for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 240 10% 3.9%; /* Dark blue/black text on card */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 240 10% 3.9%; /* Dark blue/black text on popover */
+
+    --primary: 210 80% 55%; /* Friendly medium blue */
+    --primary-foreground: 0 0% 98%; /* Light text on primary */
+
+    --secondary: 240 4.8% 95.9%; /* Light gray */
+    --secondary-foreground: 240 5.9% 10%; /* Dark text on secondary */
+
+    --muted: 240 4.8% 95.9%; /* Light gray */
+    --muted-foreground: 240 3.8% 46.1%; /* Medium gray text */
+
+    --accent: 210 90% 60%; /* Brighter, more vibrant blue for accents */
+    --accent-foreground: 0 0% 98%; /* Light text on accent */
+
+    --destructive: 0 72% 51%; /* Red */
+    --destructive-foreground: 0 0% 98%; /* Light text for destructive */
+
+    --border: 240 5.9% 90%; /* Light gray border */
+    --input: 240 5.9% 90%; /* Light gray input background */
+    --ring: 210 80% 55%; /* Blue for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific theme variables */
+    --sidebar-background: 0 0% 96%; /* Slightly off-white for Sidebar, distinct from main background */
+    --sidebar-foreground: 240 10% 3.9%; /* Dark text */
+    --sidebar-primary: 210 80% 55%; /* Blue */
+    --sidebar-primary-foreground: 0 0% 98%; /* Light text on blue */
+    --sidebar-accent: 240 4.8% 90%; /* Lighter gray for hover on sidebar items */
+    --sidebar-accent-foreground: 240 10% 3.9%; /* Dark text on hover */
+    --sidebar-border: 240 5.9% 85%; /* Slightly darker border for sidebar */
+    --sidebar-ring: 210 80% 55%; /* Blue for focus */
+
+    --chart-1: 210 80% 55%; /* Blue */
+    --chart-2: 210 70% 65%; /* Lighter Blue */
+    --chart-3: 240 4.8% 80%;   /* Medium Light Gray */
+    --chart-4: 240 3.8% 60%;   /* Medium Gray */
+    --chart-5: 160 60% 50%; /* Teal/Cyan for contrast if needed */
+  }
+
+  .dark {
+    /* Define dark theme variables if you want to support both,
+       otherwise these can be removed if the app is light-only.
+       For now, these will be a simple inversion or a different dark scheme.
+       Let's assume the app is moving to light-only for now, and remove the explicit .dark overrides
+       unless a dark mode toggle is intended.
+       If we keep .dark, these should reflect the OLD dark theme or a new preferred dark one.
+       Given the request for "lighter", I'll make the .dark variables mirror the light ones,
+       effectively making the app light mode only unless explicitly switched.
+       Alternatively, for a true dark mode separate from the old one:
+    */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 210 80% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 210 90% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 210 80% 55%;
+
+    --sidebar-background: 240 10% 2.9%; /* Even darker for sidebar in dark mode */
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 80% 55%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 3.7% 10.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 12.9%;
+    --sidebar-ring: 210 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
